@@ -1,0 +1,2 @@
+execute_script {D:\Berserk\Client_Test\src\test\java\file.txt}
+add {opop}

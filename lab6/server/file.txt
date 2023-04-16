@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "name": "ewqewqewq",
+    "coordinates": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "creationDate": "27-03-2023",
+    "area": 1,
+    "numberOfRooms": 1,
+    "New": false,
+    "furnish": "NONE",
+    "transports": "NONE",
+    "house": {
+      "name": "Name № 1",
+      "year": 1,
+      "numberOfFlatsOnFloor": 1
+    }
+  },
+  {
+    "id": 2,
+    "name": "opaa",
+    "coordinates": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "creationDate": "27-03-2023",
+    "area": 1,
+    "numberOfRooms": 1,
+    "New": false,
+    "furnish": "NONE",
+    "transports": "NONE",
+    "house": {
+      "name": "Name № 2",
+      "year": 1,
+      "numberOfFlatsOnFloor": 1
+    }
+  },
+  {
+    "id": 3,
+    "name": "ewqeqw",
+    "coordinates": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "creationDate": "28-03-2023",
+    "area": 1,
+    "numberOfRooms": 1,
+    "New": false,
+    "furnish": "NONE",
+    "transports": "NONE",
+    "house": {
+      "name": "Name № 4",
+      "year": 1,
+      "numberOfFlatsOnFloor": 1
+    }
+  },
+  {
+    "id": 4,
+    "name": "opop",
+    "coordinates": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "creationDate": "28-03-2023",
+    "area": 1,
+    "numberOfRooms": 1,
+    "New": false,
+    "furnish": "NONE",
+    "transports": "NONE",
+    "house": {
+      "name": "Name № 5",
+      "year": 1,
+      "numberOfFlatsOnFloor": 1
+    }
+  }
+]
