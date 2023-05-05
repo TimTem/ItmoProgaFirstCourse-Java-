@@ -1,0 +1,2 @@
+add {ewqeqw}
+execute_script {D:\Berserk\Client_Test\src\test\java\file1.txt}
