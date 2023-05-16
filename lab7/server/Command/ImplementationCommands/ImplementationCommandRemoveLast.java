@@ -30,6 +30,7 @@ public class ImplementationCommandRemoveLast {
                reversedStack.pop();
                 StackRunner.flats = new Stack<>();
                 StackRunner.flats.addAll(reversedStack);
+                Flat.count -=1;
                 out.writeObject("Последний элемент в коллекции удален");
             }catch (SQLException e){
                 out.writeObject("Последний элемент в коллекции не был удален!");

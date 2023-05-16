@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -42,7 +43,7 @@ public class ImplementationCommandUpdate {
 //        }
 //    }
     public static void updateElementCollection
-    (Stack<Flat> flats, ArrayList<String> arrayList, ObjectOutputStream out){
+    (Stack<Flat> flats, ArrayList<String> arrayList, ObjectOutputStream out) {
         try {
             Pattern pattern = Pattern.compile("[1-9]*");
             Matcher mt = pattern.matcher(arrayList.get(0));
@@ -72,6 +73,30 @@ public class ImplementationCommandUpdate {
                             preparedStatement2.setInt(11, Integer.parseInt(arrayList.get(11)));
                             preparedStatement2.setInt(12, id);
                             resultSet1 = preparedStatement2.executeUpdate();
+
+
+                            Iterator<Flat> iterator = flats.iterator();
+                            while (iterator.hasNext()) {
+                                Flat flat = iterator.next();
+                                if (Integer.parseInt(arrayList.get(0)) == flat.getId()) {
+                                    if (flat.getUserName().getNameUser().equals(arrayList.get(12))) {
+                                        try {
+//                        //Допиши запрос на обновление
+                                            flat.setName(arrayList.get(1));
+                                            flat.setCoordinates(new Coordinates(Double.parseDouble(arrayList.get(2)), Double.parseDouble(arrayList.get(3))));
+                                            flat.setArea(Long.parseLong(arrayList.get(4)));
+                                            flat.setNumberOfRooms(Long.parseLong(arrayList.get(5)));
+                                            flat.setNew(Boolean.parseBoolean(arrayList.get(6)));
+                                            flat.setFurnish(arrayList.get(7));
+                                            flat.setTransport(arrayList.get(8));
+                                            flat.setHouse(new House(arrayList.get(9), Integer.parseInt(arrayList.get(10)), Long.parseLong(arrayList.get(11))));
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                }
+                            }
+
                             out.writeObject("Изменена квартира № " + arrayList.get(0) + ".");
                             return;
                         } else {
@@ -83,19 +108,17 @@ public class ImplementationCommandUpdate {
                     out.writeObject("Такого элемента нет в коллекции");
                     return;
                 }
-            }else {
+            } else {
                 out.writeObject("Неизвестный синтаксис!");
-            return;
+                return;
             }
-        }catch(SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 }
-
 
 
 //        Iterator<Flat> iterator = flats.iterator();

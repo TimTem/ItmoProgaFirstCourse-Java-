@@ -32,7 +32,7 @@ public class InitializationCommandExecuteScript {
                     if (RegExpAdd.addRegExp(str) != null) {
                         MultiMap<CommandType, ArrayList<String>> multiMap = new MultiMap<>();
                         ArrayList<String> arrayList = new ArrayList<>();
-                        AddInArrayListForCommandAdd.addInArrayList(arrayList, RegExpAdd.addRegExp(str));
+                        AddInArrayListDefault.addInArrayList(arrayList,str);
                         multiMap.put(CommandType.ADD, arrayList);
                         arrayListForMultiMap.add(multiMap);
 //                        MultiMap<CommandType, ArrayList<String>> multiMap1 = new MultiMap<>();

@@ -3,6 +3,7 @@ package Client;
 //import Commands.HelpCommand;
 
 import AssemblyMultiMap.MultiMap;
+import AuthorizationClient.ClassForAutentification;
 import AuthorizationClient.Config;
 import Commands.CommandType;
 import Launcher.ClientLauncher;
@@ -33,6 +34,7 @@ public class ClientWork {
                 out.writeObject(ClientLauncher.runner());
                 String str = (String) inputStream.readObject();
                 System.out.println(str);
+                ClassForAutentification.autentificationForChekUser();
             }
         } catch (IOException e) {
         }catch (Exception e){

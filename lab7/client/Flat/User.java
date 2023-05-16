@@ -2,6 +2,16 @@ package Flat;
 
 public class User {
     private static String nameUser;
+    private static String password;
+
+    public static String getPassword() {
+        return password;
+    }
+
+    public static void setPassword(String password) {
+        User.password = password;
+    }
+
     public static String getNameUser() {
         return nameUser;
     }

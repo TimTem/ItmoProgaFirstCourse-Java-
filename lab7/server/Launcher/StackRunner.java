@@ -16,7 +16,7 @@ public class StackRunner {
 
     //    public static Developer developer = new Developer(new Help(stack), new Show(stack), new Clear(stack), new Save(stack), new RemoveLast(stack), new History(stack), new AverageOfNumberOfRooms(stack), new Exit(stack), new Info(stack), new Add(stack), new RemoveById(stack), new RemoveGreater(stack), new FilterStartsWithName(stack));
 
-    public static void runner(MultiMap<CommandType, ArrayList<MultiMap<CommandType, ArrayList<String>>>> multiMap, ObjectOutputStream out) throws Exception {
+    public synchronized static void runner(MultiMap<CommandType, ArrayList<MultiMap<CommandType, ArrayList<String>>>> multiMap, ObjectOutputStream out) throws Exception {
         if (multiMap.containsKey(CommandType.UPDATE)) {
             ArrayList<MultiMap<CommandType, ArrayList<String>>> arrayList;
             arrayList = multiMap.get(CommandType.UPDATE);
@@ -51,7 +51,11 @@ public class StackRunner {
 //               continue;
         }
         if (multiMap.containsKey(CommandType.CLEAR)) {
-            ImplementationCommandClear.implementationClear(flats, out);
+            ArrayList<MultiMap<CommandType, ArrayList<String>>> arrayList = new ArrayList<>();
+            arrayList = multiMap.get(CommandType.CLEAR);
+            MultiMap<CommandType, ArrayList<String>> multiMap1 = new MultiMap<>();
+            multiMap1 = arrayList.get(0);
+            ImplementationCommandClear.implementationClear(flats, multiMap1.get(CommandType.CLEAR) ,out);
 //               ImplementationCommandSave.save(flats);
 //               continue;
         }

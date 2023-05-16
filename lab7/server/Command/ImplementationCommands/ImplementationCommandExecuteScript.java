@@ -21,7 +21,7 @@ public class ImplementationCommandExecuteScript {
         for (int i = 0; i < arrayList1.size(); i++) {
             MultiMap<CommandType, ArrayList<String>> myMultiMap = arrayList1.get(i);
             if (myMultiMap.containsKey(CommandType.ADD)) {
-                ImplementationCommandAdd.implementationAdd(flats,myMultiMap.get(CommandType.ADD), out);
+                ImplementationCommandAddForExecuteScript.implementationAddForExecuteScript(flats,myMultiMap.get(CommandType.ADD), out);
 //                ImplementationCommandSave.save(flats);
             }
             if (myMultiMap.containsKey(CommandType.INFO)) {
@@ -37,7 +37,7 @@ public class ImplementationCommandExecuteScript {
 //                ImplementationCommandSave.save(flats);
             }
             if (myMultiMap.containsKey(CommandType.CLEAR)) {
-                ImplementationCommandClear.implementationClear(flats, out);
+                ImplementationCommandClear.implementationClear(flats, myMultiMap.get(CommandType.CLEAR) ,out);
 //                ImplementationCommandSave.save(flats);
             }
             if (myMultiMap.containsKey(CommandType.AVERAGE_OF_NUMBER_OF_ROOMS)) {
@@ -58,5 +58,6 @@ public class ImplementationCommandExecuteScript {
             }
             // работа с myMultiMap
         }
+        out.writeObject("Все команды выполнены");
     }
 }

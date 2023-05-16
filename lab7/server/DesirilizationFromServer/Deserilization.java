@@ -21,7 +21,8 @@ public class Deserilization {
             // Создание объекта Flat и установка его свойств
             Flat flat = new Flat();
             flat.setId();
-            System.out.println(rs.getInt("id"));
+            //тут прикол с id
+//            System.out.println(rs.getInt("id"));
             flat.setUser(new User(rs.getString("login")));
             flat.setName(rs.getString("name_flat"));
             flat.setCoordinates(new Coordinates(rs.getInt("x"),rs.getDouble("y") ));

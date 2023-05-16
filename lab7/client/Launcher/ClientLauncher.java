@@ -1,6 +1,7 @@
 package Launcher;
 
 import AssemblyMultiMap.MultiMap;
+import AuthorizationClient.ClassForAutentification;
 import Client.ClientWork;
 import Commands.CommandType;
 import FieldInitialization.AddInArrayListForCommandAdd;
@@ -97,6 +98,7 @@ public class ClientLauncher {
                 ArrayList<MultiMap<CommandType, ArrayList<String>>> arrayList1 = new ArrayList<>();
                 MultiMap<CommandType, ArrayList<String>> multiMap = new MultiMap<>();
                 ArrayList<String> arrayList = new ArrayList<>();
+                arrayList.add(User.getNameUser());
                 multiMap.put(CommandType.CLEAR, arrayList);
                 arrayList1.add(multiMap);
                 multiMap1.put(CommandType.CLEAR, arrayList1);
