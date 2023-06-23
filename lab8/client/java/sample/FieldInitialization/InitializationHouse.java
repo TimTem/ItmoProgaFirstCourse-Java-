@@ -1,0 +1,58 @@
+package sample.FieldInitialization;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class InitializationHouse {
+    public static String initializationHouseName(String str){
+        Pattern patern = Pattern.compile("^([A-z]{2,}|[А-я]{2,} [А-я]{2,}|[А-я]{2,}_[А-я]{2,}|[A-z]{2,} [A-z]{2,}|[А-я]{2,})$");
+        Matcher mat = patern.matcher(str);
+        if (mat.matches()){
+            return str;
+        }
+//        System.out.print("The name of operator is entered incorrectly. Do you want to fix it? ");
+//        String answer = scanner.nextLine();
+//        answer = answer.replaceAll(" ", "");
+//        Pattern pattern_2 = Pattern.compile("(YES|Yes|yes|yEs|yeS|Да|ДА|да|дА)");
+//        Matcher mt_2 = pattern_2.matcher(answer);
+//        if (mt_2.matches()){
+//            return initializationHouseName();
+//        }
+        return "none";
+    }
+    public static String initializationYear(Integer answer1) throws NullPointerException{
+        String answer = answer1.toString();
+        Pattern pattern = Pattern.compile("^[1-9][0-9]*$");
+        Matcher mt = pattern.matcher(answer);
+        if(mt.matches()){
+            return answer;
+        }
+//        System.out.print("The year of operator is entered incorrectly. Do you want to fix it? ");
+//        String answer1 = scanner.nextLine();
+//        answer1 = answer1.replaceAll(" ", "");
+//        Pattern pattern_2 = Pattern.compile("(YES|Yes|yes|yEs|yeS|Да|ДА|да|дА)");
+//        Matcher mt_2 = pattern_2.matcher(answer1);
+//        if (mt_2.matches()){
+//            return initializationYear();
+//        }
+        return "1";
+    }
+    public static String initializationNumberOfFlatsOnFloor(Integer str1){
+        String str = str1.toString();
+        Pattern pattern = Pattern.compile("^[1-9][0-9]*$");
+        Matcher mt = pattern.matcher(str);
+        if(mt.matches()){
+            return str;
+        }
+//        System.out.print("The number of flats on floor of operator is entered incorrectly. Do you want to fix it? ");
+//        String answer1 = scanner.nextLine();
+//        answer1 = answer1.replaceAll(" ", "");
+//        Pattern pattern_2 = Pattern.compile("(YES|Yes|yes|yEs|yeS|Да|ДА|да|дА)");
+//        Matcher mt_2 = pattern_2.matcher(answer1);
+//        if (mt_2.matches()){
+//            return initializationNumberOfFlatsOnFloor();
+//        }
+        return "1";
+    }
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BasicPanelContoller">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="62.0" prefWidth="848.0" style="-fx-background-color: #43a08f;">
+         <children>
+            <ImageView fitHeight="62.0" fitWidth="201.0" layoutX="344.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="D:\Berserk\Lab8Try1\src\main\java\sample\assets\Fight-Club-PNG-Background.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="userText" fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вы авторизовались как">
+               <font>
+                  <Font name="Arial Bold Italic" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <TableView fx:id="tableForDataToDB" layoutX="-1.0" layoutY="61.0" prefHeight="454.0" prefWidth="848.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="33.60000532865524" text="ID" />
+          <TableColumn fx:id="loginColumn" prefWidth="48.80002212524414" text="login" />
+            <TableColumn fx:id="nameFlatColumn" prefWidth="64.79998779296875" text="name_flat" />
+            <TableColumn fx:id="XColumn" prefWidth="24.00006103515625" text="X" />
+            <TableColumn fx:id="YColumn" prefWidth="25.60003662109375" text="Y" />
+            <TableColumn fx:id="dateColumn" prefWidth="33.60003662109375" text="date" />
+            <TableColumn fx:id="areaColumn" prefWidth="38.39994812011719" text="area" />
+            <TableColumn fx:id="numColumn" prefWidth="77.60003662109375" text="num_rooms" />
+            <TableColumn fx:id="isNewColumn" prefWidth="49.5999755859375" text="is_new" />
+            <TableColumn fx:id="furnishColumn" prefWidth="58.39996337890625" text="furnish" />
+            <TableColumn fx:id="transportColumn" minWidth="0.0" prefWidth="59.99993896484375" text="transport" />
+            <TableColumn fx:id="nameHouseColumn" maxWidth="209.60009765625" prefWidth="81.59991455078125" text="namehouse" />
+            <TableColumn fx:id="yearHouseColumn" prefWidth="72.80010986328125" text="yearhouse" />
+            <TableColumn fx:id="numberHouseColumn" prefWidth="169.5999755859375" text="numberofflatsonfloor" />
+        </columns>
+      </TableView>
+      <Button id="main_button_field" fx:id="commands" layoutX="603.0" layoutY="537.0" mnemonicParsing="false" opacity="0.87" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #9f2e52; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Команды" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button id="main_button_field" fx:id="visualization" layoutX="340.0" layoutY="537.0" mnemonicParsing="false" opacity="0.87" prefHeight="30.0" prefWidth="166.0" style="-fx-background-color: #9f2e52; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Визуализация" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button id="main_button_field" fx:id="changeButton" layoutX="135.0" layoutY="537.0" mnemonicParsing="false" opacity="0.87" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #9f2e52; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Изменить" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button id="main_button_field" fx:id="createButton" layoutX="14.0" layoutY="537.0" mnemonicParsing="false" opacity="0.87" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #9f2e52; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Создать" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button id="main_button_field" fx:id="exitButton" layoutX="726.0" layoutY="537.0" mnemonicParsing="false" opacity="0.87" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #9f2e52; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Выйти" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

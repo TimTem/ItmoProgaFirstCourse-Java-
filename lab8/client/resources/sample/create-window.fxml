@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CreateWindowController">
+   <children>
+      <Label fx:id="never" layoutX="3.0" prefHeight="98.0" prefWidth="430.0" text="Никогда никому не рассказывай о бойцовском клубе" wrapText="true">
+         <font>
+            <Font name="Arial Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_flat" layoutX="22.0" layoutY="120.0" text="Название квартиры">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="550.0" fitWidth="404.0" layoutX="433.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" smooth="false" AnchorPane.leftAnchor="433.0">
+         <image>
+            <Image url="D:\Berserk\Lab8Try1\src\main\java\sample\assets\fightclub_1.jpg" />
+         </image>
+         <viewport>
+            <Rectangle2D width="350.0" />
+         </viewport>
+      </ImageView>
+      <Label layoutX="24.0" layoutY="149.0" text="X" fx:id="x">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="y" layoutX="24.0" layoutY="181.0" text="Y">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="area1" layoutX="24.0" layoutY="211.0" prefHeight="18.0" prefWidth="178.0" text="Площадь">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="number_of_rooms" layoutX="22.0" layoutY="242.0" prefHeight="18.0" prefWidth="178.0" text="Количество комнат">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="quality" layoutX="21.0" layoutY="273.0" prefHeight="18.0" prefWidth="154.0" text="Качество">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="finishing" layoutX="21.0" layoutY="300.0" prefHeight="18.0" prefWidth="154.0" text="Отделка">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="transport" layoutX="21.0" layoutY="329.0" prefHeight="18.0" prefWidth="170.0" text="Транспорт">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_house" layoutX="21.0" layoutY="361.0" prefHeight="18.0" prefWidth="178.0" text="Название дома">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="years" layoutX="23.0" layoutY="389.0" prefHeight="18.0" prefWidth="150.0" text="Года">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="number_apps" layoutX="23.0" layoutY="415.0" prefHeight="54.0" prefWidth="178.0" text="Количество квартир на этаже" wrapText="true">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Button id="main_button_field" fx:id="exit" layoutX="45.0" layoutY="491.0" mnemonicParsing="false" opacity="0.87" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #bf2e1b; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Выйти" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button id="main_button_field" fx:id="add" layoutX="262.0" layoutY="491.0" mnemonicParsing="false" opacity="0.87" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #bf2e1b; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Добавить" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="name" layoutX="207.0" layoutY="116.0" prefHeight="18.0" prefWidth="150.0" />
+      <TextField fx:id="nameHouse" layoutX="207.0" layoutY="357.0" prefHeight="18.0" prefWidth="150.0" />
+      <Spinner layoutX="207.0" layoutY="145.0" prefHeight="26.0" prefWidth="150.0" fx:id="xCoordinates" />
+      <Spinner fx:id="yCoordinates" layoutX="207.0" layoutY="177.0" prefHeight="26.0" prefWidth="150.0" />
+      <Spinner fx:id="area" layoutX="207.0" layoutY="207.0" prefHeight="26.0" prefWidth="150.0" />
+      <Spinner fx:id="numberOfRooms" layoutX="207.0" layoutY="238.0" prefHeight="26.0" prefWidth="150.0" />
+      <Spinner fx:id="yearsHouse" layoutX="207.0" layoutY="385.0" prefHeight="26.0" prefWidth="150.0" />
+      <Spinner fx:id="numberOfApartments" layoutX="207.0" layoutY="429.0" prefHeight="26.0" prefWidth="150.0" />
+      <ComboBox fx:id="qualityBurger" layoutX="207.0" layoutY="269.0" prefWidth="150.0" promptText="Quality" />
+      <ComboBox fx:id="finishingBurger" layoutX="207.0" layoutY="297.0" prefWidth="150.0" promptText="Furnish" />
+      <ComboBox fx:id="transportBurger" layoutX="207.0" layoutY="326.0" prefWidth="150.0" promptText="Transports" />
+   </children>
+</AnchorPane>

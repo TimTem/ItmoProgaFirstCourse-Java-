@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChangeWindowController">
+    <children>
+        <Label fx:id="your" layoutX="3.0" prefHeight="117.0" prefWidth="438.0" text="Это твоя жизнь, и она становится короче с каждой минутой." wrapText="true">
+            <font>
+                <Font name="Arial Bold Italic" size="26.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="550.0" fitWidth="373.0" layoutX="433.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" smooth="false" AnchorPane.leftAnchor="433.0">
+            <image>
+                <Image url="D:\Berserk\Lab8Try1\src\main\java\sample\assets\fightclub_1.jpg" />
+            </image>
+            <viewport>
+                <Rectangle2D width="350.0" />
+            </viewport>
+        </ImageView>
+        <Button id="main_button_field" fx:id="exit" layoutX="45.0" layoutY="487.0" mnemonicParsing="false" opacity="0.87" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #bf2e1b; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Выйти" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="15.0" />
+            </font>
+        </Button>
+        <Button id="main_button_field" fx:id="change" layoutX="262.0" layoutY="487.0" mnemonicParsing="false" opacity="0.87" prefHeight="16.0" prefWidth="108.0" style="-fx-background-color: #bf2e1b; -fx-border-color: #af2a5f; -fx-border-radius: 5; -fx-border-style: solid inside;" text="Изменить" textFill="WHITE">
+            <font>
+                <Font name="Arial Bold" size="15.0" />
+            </font>
+        </Button>
+      <Label fx:id="name_flat" layoutX="32.0" layoutY="130.0" text="Название квартиры">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="159.0" text="X" fx:id="x">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="y" layoutX="34.0" layoutY="191.0" text="Y">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="area1" layoutX="34.0" layoutY="221.0" prefHeight="18.0" prefWidth="178.0" text="Площадь">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="number_of_rooms" layoutX="32.0" layoutY="252.0" prefHeight="18.0" prefWidth="178.0" text="Количество комнат">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="quality" layoutX="31.0" layoutY="283.0" prefHeight="18.0" prefWidth="154.0" text="Качество">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="finishing" layoutX="31.0" layoutY="310.0" prefHeight="18.0" prefWidth="154.0" text="Отделка">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="transport" layoutX="31.0" layoutY="339.0" prefHeight="18.0" prefWidth="170.0" text="Транспорт">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_house" layoutX="31.0" layoutY="371.0" prefHeight="18.0" prefWidth="178.0" text="Название дома">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="years" layoutX="33.0" layoutY="399.0" prefHeight="18.0" prefWidth="150.0" text="Года">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="number_apps" layoutX="33.0" layoutY="425.0" prefHeight="54.0" prefWidth="178.0" text="Количество квартир на этаже" wrapText="true">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="217.0" layoutY="126.0" prefHeight="18.0" prefWidth="150.0" />
+      <TextField fx:id="nameHouse" layoutX="217.0" layoutY="367.0" prefHeight="18.0" prefWidth="150.0" />
+      <Spinner layoutX="217.0" layoutY="155.0" prefHeight="26.0" prefWidth="150.0" fx:id="xCoordinates" />
+      <Spinner fx:id="yCoordinates" layoutX="217.0" layoutY="187.0" prefHeight="26.0" prefWidth="150.0" />
+      <Spinner fx:id="area" layoutX="217.0" layoutY="217.0" prefHeight="26.0" prefWidth="150.0" />
+      <Spinner fx:id="numberOfRooms" layoutX="217.0" layoutY="248.0" prefHeight="26.0" prefWidth="150.0" />
+      <Spinner fx:id="yearsHouse" layoutX="217.0" layoutY="395.0" prefHeight="26.0" prefWidth="150.0" />
+      <Spinner fx:id="numberOfApartments" layoutX="217.0" layoutY="439.0" prefHeight="26.0" prefWidth="150.0" />
+      <ComboBox fx:id="qualityBurger" layoutX="217.0" layoutY="279.0" prefWidth="150.0" promptText="Quality" />
+      <ComboBox fx:id="finishingBurger" layoutX="217.0" layoutY="307.0" prefWidth="150.0" promptText="Furnish" />
+      <ComboBox fx:id="transportBurger" layoutX="217.0" layoutY="336.0" prefWidth="150.0" promptText="Transports" />
+    </children>
+</AnchorPane>
