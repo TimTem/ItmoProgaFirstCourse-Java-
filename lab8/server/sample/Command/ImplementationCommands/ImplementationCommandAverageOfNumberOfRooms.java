@@ -25,8 +25,8 @@ public class ImplementationCommandAverageOfNumberOfRooms {
             PreparedStatement preparedStatement = getDBConnection().prepareStatement("SELECT SUM(numberofflatsonfloor)::float / (SELECT COUNT(*) FROM flat) AS avg_flats_per_floor FROM flat;");
             resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){
-                float counter = resultSet.getFloat("avg_flats_per_floor");
-                out.writeObject("The average value of the numberOfRooms field for all elements of the collection: " + counter);
+                Float counter = resultSet.getFloat("avg_flats_per_floor");
+                out.writeObject(counter);
             }
 //        long counter = 0;
 //        for (Flat flat : flats) {

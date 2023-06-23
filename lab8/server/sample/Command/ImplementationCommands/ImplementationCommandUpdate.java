@@ -98,6 +98,7 @@ public class ImplementationCommandUpdate {
                             }
 
                             //out.writeObject("Изменена квартира № " + arrayList.get(0) + ".");
+                            System.out.println("Изменена квартира № " + arrayList.get(0) + ".");
                             return;
                         } else {
                             //out.writeObject("Вы не можете изменить квартиру, потому что вы не владелец квартиры!");

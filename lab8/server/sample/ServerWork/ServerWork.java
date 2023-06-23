@@ -36,11 +36,9 @@ public class ServerWork implements Runnable {
             //Канал чтения с сокета
             //Пока сокет не закрыт, общаемся с клиентом!
             out.writeObject(StackRunner.flats);
-            synchronized (StackRunner.flats){
                 while (!socket.isClosed()) {
                     MultiMap multiMap = (MultiMap) inputStream.readObject();
                     StackRunner.runner(multiMap, out);
-                }
             }
         } catch (IOException e) {
             System.out.println("Пользователь был отключен!");
